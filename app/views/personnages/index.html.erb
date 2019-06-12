@@ -5,14 +5,14 @@
     <br>
     <div class="cards">
       <% @personnages.each do |personnage| %>
-        <%#= link_to hero_path(hero) do %>
+        <%= link_to personnage_path(personnage) do %>
           <div class="card-trip">
             <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
             <div class="card-trip-infos">
               <h2><%= personnage.nom %></h2>
             </div>
           </div>
-        <%# end %>
+        <% end %>
       <% end %>
     </div>
   </div>
