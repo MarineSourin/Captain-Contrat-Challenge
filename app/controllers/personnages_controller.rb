@@ -1,5 +1,5 @@
 class PersonnagesController < ApplicationController
-  before_action :set_personnage, only: [:show, :edit, :update]
+  before_action :set_personnage, only: [:show, :edit, :update, :destroy]
 
   def index
     @personnages = Personnage.all
@@ -30,6 +30,11 @@ class PersonnagesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @personnage.destroy
+    redirect_to personnages_path
   end
 
   private

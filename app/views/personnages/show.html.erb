@@ -7,9 +7,19 @@
       <h2><%= @personnage.nom %></h2>
       <p>Points de vie: <%= @personnage.vie %> 🌟</p>
       <p>Points d'attaque: <%= @personnage.attaque %> 💥</p>
-      <%= link_to edit_personnage_path(@personnage) do %>
-        <i class="far fa-edit"></i>
-      <% end %>
+      <div class="links">
+        <div class="edit">
+          <%= link_to edit_personnage_path(@personnage) do %>
+            <p>Modifier <i class="far fa-edit"></i></p>
+          <% end %>
+        </div>
+        <p>.....</p>
+        <div class="delete">
+          <%= link_to personnage_path(@personnage), method: :delete  do %>
+            <p>Supprimer <i class="far fa-trash-alt"></i></p>
+          <% end %>
+        </div>
+      </div>
     </div>
     <div class="btn btn-add">
 

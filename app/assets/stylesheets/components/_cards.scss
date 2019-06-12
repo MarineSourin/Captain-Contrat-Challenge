@@ -75,3 +75,10 @@ i {
     font-size: 25px;
   }
 }
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
