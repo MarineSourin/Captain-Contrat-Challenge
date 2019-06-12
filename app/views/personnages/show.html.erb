@@ -1,9 +1,9 @@
-<div class="wrapper" style="background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2)), url('<%= image_path "Arene.jpg" %>');">
+<div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('<%= image_path "Arene.jpg" %>');">
   <div class="grid">
     <div class="photo">
       <%= cl_image_tag @personnage.photo, height: 220, width: 200 %>
     </div>
-    <div class="content">
+    <div class="content background">
       <h2 class='title'><%= @personnage.nom %></h2>
       <p>Points de vie: <%= @personnage.vie %> 🌟</p>
       <p>Points d'attaque: <%= @personnage.attaque %> 💥</p>
