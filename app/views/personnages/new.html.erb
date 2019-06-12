@@ -1,0 +1,12 @@
+<div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('<%= image_path "Arene.jpg" %>');">
+  <div class="form">
+    <h2 class="title">Créez un nouveau personnage </h2>
+    <br>
+    <%= simple_form_for(@personnage) do |f| %>
+      <%= f.input :nom %>
+      <%= f.input :vie %>
+      <%= f.input :attaque %>
+      <%= f.submit 'Ajouter un personnage', class: 'btn btn-primary'%>
+    <% end %>
+  </div>
+</div>

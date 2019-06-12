@@ -1,7 +1,9 @@
 <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('<%= image_path "Arene.jpg" %>');">
-  <div class="container">
+  <div class="container content">
     <br>
     <h2 class='text-center title'>Tous les personnages !</h2>
+    <br>
+    <%= link_to "Créer un nouveau personnage", new_personnage_path, class: 'btn btn-flat' %>
     <br>
     <div class="cards">
       <% @personnages.each do |personnage| %>
