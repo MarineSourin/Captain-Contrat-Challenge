@@ -5,4 +5,7 @@ class Personnage < ApplicationRecord
   validates :vie, presence: true
   validates :attaque, presence: true
 
+  has_many :joueurs
+  has_many :combats, through: :joueurs
+
 end
