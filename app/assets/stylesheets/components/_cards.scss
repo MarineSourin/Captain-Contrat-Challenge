@@ -14,7 +14,7 @@
 .card-trip > img {
   height: 200px;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .card-trip h2 {
@@ -60,17 +60,21 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0,0,0,0.4);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  color: white;
+  width: 300px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  margin-top: 25%;
 }
 
 i {
   font-size: 20px;
+  color: white;
   &:hover {
     font-size: 25px;
   }
@@ -81,4 +85,8 @@ i {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  color: white;
+  p {
+    color: transparent;
+  }
 }

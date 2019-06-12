@@ -1,22 +1,22 @@
-<div class="container">
+<div class="wrapper" style="background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2)), url('<%= image_path "Arene.jpg" %>');">
   <div class="grid">
     <div class="photo">
-
+      <%= cl_image_tag @personnage.photo, height: 220, width: 200 %>
     </div>
     <div class="content">
-      <h2><%= @personnage.nom %></h2>
+      <h2 class='title'><%= @personnage.nom %></h2>
       <p>Points de vie: <%= @personnage.vie %> 🌟</p>
       <p>Points d'attaque: <%= @personnage.attaque %> 💥</p>
       <div class="links">
         <div class="edit">
           <%= link_to edit_personnage_path(@personnage) do %>
-            <p>Modifier <i class="far fa-edit"></i></p>
+            <i class="far fa-edit"></i>
           <% end %>
         </div>
         <p>.....</p>
         <div class="delete">
           <%= link_to personnage_path(@personnage), method: :delete  do %>
-            <p>Supprimer <i class="far fa-trash-alt"></i></p>
+            <i class="far fa-trash-alt"></i>
           <% end %>
         </div>
       </div>

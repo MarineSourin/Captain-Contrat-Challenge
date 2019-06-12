@@ -3,52 +3,25 @@ Personnage.destroy_all
 
 puts "Creating Personnages"
 
-puts "Creating Mario"
-mario = Personnage.new
-mario.nom = "Mario"
-mario.vie = (20..100).to_a.sample
-mario.attaque = (30..60).to_a.sample
-mario.save!
-puts "Mario created"
+personnages = [
+  { nom: "Mario", photo_url: 'https://vignette.wikia.nocookie.net/supersmashbrosfanon/images/7/71/MarioSSBU.png/revision/latest?cb=20120511134657'},
+  { nom: "Link", photo_url: 'https://vignette.wikia.nocookie.net/ssb/images/8/8b/Link_-_Super_Smash_Bros._Brawl.png/revision/latest/scale-to-width-down/350?cb=20160118005104'},
+  { nom: "Pikachu", photo_url: 'https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c325.png'},
+  { nom: "Sonic", photo_url: 'http://info.sonicretro.org/images/c/c0/ASR_Sonic.png'},
+  { nom: "Kirby", photo_url: 'https://upload.wikimedia.org/wikipedia/sco/5/5c/Kirby.png'},
+  { nom: "Donkey Kong", photo_url: 'https://www.mariowiki.com/images/thumb/b/b5/SuperMarioParty_DonkeyKong.png/1200px-SuperMarioParty_DonkeyKong.png'},
+  ]
 
-puts "Creating Link"
-link = Personnage.new
-link.nom = "Link"
-link.vie = (20..100).to_a.sample
-link.attaque = (30..60).to_a.sample
-link.save!
-puts "Link created"
-
-puts "Creating Pikachu"
-pickachu = Personnage.new
-pickachu.nom = "Pikachu"
-pickachu.vie = (20..100).to_a.sample
-pickachu.attaque = (30..60).to_a.sample
-pickachu.save!
-puts "Pikachu created"
-
-puts "Creating Sonic"
-sonic = Personnage.new
-sonic.nom = "Sonic"
-sonic.vie = (20..100).to_a.sample
-sonic.attaque = (30..60).to_a.sample
-sonic.save!
-puts "Sonic created"
-
-puts "Creating Kirby"
-kirby = Personnage.new
-kirby.nom = "Kirby"
-kirby.vie = (20..100).to_a.sample
-kirby.attaque = (30..60).to_a.sample
-kirby.save!
-puts "Kirby created"
-
-puts "Creating Donkey Kong"
-donkey_kong = Personnage.new
-donkey_kong.nom = "Donkey Kong"
-donkey_kong.vie = (20..100).to_a.sample
-donkey_kong.attaque = (30..60).to_a.sample
-donkey_kong.save!
-puts "Donkey Kong created"
+personnages.each do |perso|
+  vie = (20..100).to_a.sample
+  attaque = (30..60).to_a.sample
+  new_personnage = Personnage.new(
+    nom:       perso[:nom],
+    vie:       vie,
+    attaque:   attaque,
+  )
+  new_personnage.remote_photo_url = perso[:photo_url]
+  new_personnage.save!
+end
 
 puts "Finished"
