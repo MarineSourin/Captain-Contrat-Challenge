@@ -2,6 +2,9 @@
   <div class="banner-content">
     <h1>Retournez en enfance avec Super Smash Bros 👊🏻💥</h1>
     <br>
-    <%= link_to "Voir tous les personnages", personnages_path, class: "btn btn-flat" %>
+    <div class="link">
+      <%= link_to "Voir tous les personnages", personnages_path, class: "btn btn-flat" %>
+      <%= link_to "Commencer un combat", new_combat_path, class: 'btn btn-combat' %>
+    </div>
   </div>
 </div>

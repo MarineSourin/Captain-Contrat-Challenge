@@ -8,10 +8,10 @@
     </div>
     <br>
     <% @combat.joueurs.each do |joueur| %>
-    <div class="grids background">
-      <h3><%= joueur.personnage.nom %></h3>
+    <div class="grids background text-center">
       <%= cl_image_tag joueur.personnage.photo, height: 220, width: 200 %>
-      <p><%= joueur.result %></p>
+      <h4 class='title'><%= joueur.personnage.nom %></h4>
+      <h4 class='title'><%= joueur.result %></h4>
     </div>
     <% end %>
   </div>
