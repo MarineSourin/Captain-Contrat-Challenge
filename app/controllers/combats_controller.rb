@@ -35,7 +35,7 @@ class CombatsController < ApplicationController
       break if joueur2_vie <= 0
       joueur1_vie -= (joueurs[:joueur2].personnage.attaque / 2)
     end
-    resultat(joueurs, joueur_1_vie, joueur2_vie)
+    resultat(joueurs, joueur1_vie, joueur2_vie)
   end
 
   def ordre_attaque(combat)
