@@ -1,11 +1,16 @@
 <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('<%= image_path "Arene.jpg" %>');">
   <div class="container content">
-    <br>
     <h2 class='text-center title'>Tous les personnages !</h2>
+    <div class="row text-center">
+      <%= link_to root_path do %>
+        <i class="fas fa-undo"></i>
+      <% end %>
+    </div>
     <br>
-    <%= link_to "Créer un nouveau personnage", new_personnage_path, class: 'btn btn-flat' %>
-    <br>
-    <%= link_to "Commencer un combat", new_combat_path, class: 'btn btn-flat' %>
+    <div class="link">
+      <%= link_to "Créer un nouveau personnage", new_personnage_path, class: 'btn btn-flat' %>
+      <%= link_to "Commencer un combat", new_combat_path, class: 'btn btn-combat' %>
+    </div>
     <br>
     <div class="cards">
       <% @personnages.each do |personnage| %>

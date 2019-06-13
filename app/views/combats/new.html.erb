@@ -7,15 +7,17 @@
         <% number = 0 %>
         <%= f.simple_fields_for :joueurs do |joueurs_form| %>
           <% number += 1 %>
-          <h3>Joueur <%= number %></h3>
-          <%= joueurs_form.collection_select :personnage_id, Personnage.all, :id, :nom %>
-          <h3>Arme</h3>
-            <%= joueurs_form.collection_select :arme_id, Arme.all, :id, :nom %>
-          <h3>Bouclier</h3>
-          <%= joueurs_form.collection_select :bouclier_id, Bouclier.all, :id, :nom %>
+          <div class="player grid">
+            <h3>Joueur <%= number %></h3>
+            <%= joueurs_form.collection_select :personnage_id, Personnage.all, :id, :nom %>
+            <h3>Arme</h3>
+              <%= joueurs_form.collection_select :arme_id, Arme.all, :id, :nom %>
+            <h3>Bouclier</h3>
+            <%= joueurs_form.collection_select :bouclier_id, Bouclier.all, :id, :nom %>
+          </div>
         <% end %>
         <br>
-        <%= f.submit class: 'btn btn-primary'%>
+        <%= f.submit "Let's go ! 🚀", class: 'btn btn-primary'%>
       <% end %>
     </div>
   </div>

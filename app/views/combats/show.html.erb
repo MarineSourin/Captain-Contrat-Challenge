@@ -1,8 +1,18 @@
 <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('<%= image_path "Arene.jpg" %>');">
-  <h2 class="title">Résultat</h2>
-  <% @combat.joueurs.each do |joueur| %>
-    <%= cl_image_tag joueur.personnage.photo, height: 220, width: 200 %>
-    <p><%= joueur.personnage.nom %></p>
-    <p><%= joueur.resultat %></p>
-  <% end %>
+  <div class="form">
+    <h2 class="title">Résultat</h2>
+    <div class="row text-center">
+      <%= link_to personnages_path do %>
+        <i class="fas fa-undo"></i>
+      <% end %>
+    </div>
+    <br>
+    <% @combat.joueurs.each do |joueur| %>
+    <div class="grids background">
+      <h3><%= joueur.personnage.nom %></h3>
+      <%= cl_image_tag joueur.personnage.photo, height: 220, width: 200 %>
+      <p><%= joueur.result %></p>
+    </div>
+    <% end %>
+  </div>
 </div>

@@ -16,3 +16,25 @@
     text-shadow: none;
   }
 }
+
+.btn-combat {
+  background-color: red;
+  padding: 7px;
+  color: white;
+  border-radius: 7px 0px 7px 0px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    border-radius: 0px 7px 0px 7px;
+    text-shadow: none;
+  }
+}
+
+

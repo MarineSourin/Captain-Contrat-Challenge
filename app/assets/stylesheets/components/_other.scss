@@ -1,0 +1,84 @@
+.title {
+  color: white;
+  font-weight: bolder;
+  font-size: 35px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+a {
+  color: black;
+  &:hover {
+    text-decoration: none;
+    color: black;
+    .card-trip h2 {
+      font-size: 20px;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  background-color: rgba(0,0,0,0.4);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  color: white;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.grids {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  font-size: 20px;
+  color: white;
+  &:hover {
+    font-size: 25px;
+  }
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  p {
+    color: transparent;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  display: flex
+}
+
+.player {
+  border-bottom: 2px solid gold;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+

@@ -46,7 +46,7 @@ boucliers = ["Hylia", "Bulle protectrice", "Vibranium", "Viking", "Romain"]
 
 boucliers.each do |bouclier|
   protection = (20..100).to_a.sample
-  Arme.create!(
+  Bouclier.create!(
       nom:       bouclier,
       protection: protection
     )
