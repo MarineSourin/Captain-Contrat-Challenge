@@ -1,5 +1,9 @@
 puts "Cleaning Personnages"
 Personnage.destroy_all
+puts "Cleaning Armes"
+Arme.destroy_all
+puts "Cleaning Boucliers"
+Bouclier.destroy_all
 
 puts "Creating Personnages"
 
@@ -22,6 +26,30 @@ personnages.each do |perso|
   )
   new_personnage.remote_photo_url = perso[:photo_url]
   new_personnage.save!
+end
+
+puts "Creating Armes"
+
+armes = ["Boule de feu", "Point géant", "Arc & flèches", "Coup de marteau", "Tonnerre", "Course tourbillon"]
+
+armes.each do |arme|
+  puissance = (20..100).to_a.sample
+  Arme.create!(
+      nom:       arme,
+      puissance: puissance
+    )
+end
+
+puts "Creating Boucliers"
+
+boucliers = ["Hylia", "Bulle protectrice", "Vibranium", "Viking", "Romain"]
+
+boucliers.each do |bouclier|
+  protection = (20..100).to_a.sample
+  Arme.create!(
+      nom:       bouclier,
+      protection: protection
+    )
 end
 
 puts "Finished"

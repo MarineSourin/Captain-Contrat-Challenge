@@ -9,6 +9,10 @@
           <% number += 1 %>
           <h3>Joueur <%= number %></h3>
           <%= joueurs_form.collection_select :personnage_id, Personnage.all, :id, :nom %>
+          <h3>Arme</h3>
+            <%= joueurs_form.collection_select :arme_id, Arme.all, :id, :nom %>
+          <h3>Bouclier</h3>
+          <%= joueurs_form.collection_select :bouclier_id, Bouclier.all, :id, :nom %>
         <% end %>
         <br>
         <%= f.submit class: 'btn btn-primary'%>
