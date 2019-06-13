@@ -5,6 +5,8 @@
     <br>
     <%= link_to "Créer un nouveau personnage", new_personnage_path, class: 'btn btn-flat' %>
     <br>
+    <%= link_to "Commencer un combat", new_combat_path, class: 'btn btn-flat' %>
+    <br>
     <div class="cards">
       <% @personnages.each do |personnage| %>
         <%= link_to personnage_path(personnage) do %>

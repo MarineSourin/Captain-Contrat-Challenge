@@ -1,0 +1,8 @@
+<div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('<%= image_path "Arene.jpg" %>');">
+  <h2 class="title">Résultat</h2>
+  <% @combat.joueurs.each do |joueur| %>
+    <%= cl_image_tag joueur.personnage.photo, height: 220, width: 200 %>
+    <p><%= joueur.personnage.nom %></p>
+    <p><%= joueur.resultat %></p>
+  <% end %>
+</div>
